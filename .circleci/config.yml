@@ -53,3 +53,10 @@ jobs:
       - run:
           name: API deploy
           command: npm run deploy:api
+workflows:
+  udagram:
+    jobs:
+      - install
+      - build
+      - test
+      - deploy
