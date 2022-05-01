@@ -22,8 +22,11 @@ jobs:
       - node/install
       - checkout
       - run:
-          name: Install angular globally
-          command: npm install -g @angular/cli && npm install --save-dev @angular-devkit/build-angular 
+          name: Frontend install
+          command: npm run install:frontend
+      - run:
+          name: API install
+          command: npm run install:api
       - run:
           name: Frontend build
           command: npm run build:frontend
@@ -37,6 +40,12 @@ jobs:
       - node/install
       - checkout
       - run:
+          name: Frontend install
+          command: npm run install:frontend
+      - run:
+          name: API install
+          command: npm run install:api
+      - run:
           name: Frontend test
           command: npm run test:frontend
       - run:
@@ -49,6 +58,12 @@ jobs:
       - node/install
       - checkout
       - aws-cli/install
+      - run:
+          name: Frontend install
+          command: npm run install:frontend
+      - run:
+          name: API install
+          command: npm run install:api
       - run:
           name: Frontend deploy
           command: npm run deploy:frontend
