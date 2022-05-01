@@ -57,6 +57,9 @@ workflows:
   udagram:
     jobs:
       - install
-      - build
-      - test
-      - deploy
+      - build:
+        requires: [install]
+      - test:
+        requires: [build]
+      - deploy:
+        requires: [test]
