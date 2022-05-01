@@ -23,6 +23,9 @@ jobs:
       - angular/install
       - checkout
       - run:
+          name: Install angular-cli
+          command: npm install -g @angular/cli
+      - run:
           name: Frontend build
           command: npm run build:frontend
       - run:
