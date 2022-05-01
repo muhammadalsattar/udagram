@@ -20,7 +20,7 @@ jobs:
       - image: "cimg/base:stable"
     steps:
       - node/install
-      - angular-cli/install
+      - angular/install
       - checkout
       - run:
           name: Frontend build
