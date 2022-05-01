@@ -23,7 +23,7 @@ jobs:
       - checkout
       - run:
           name: Install angular globally
-          command: npm install -g @angular/cli
+          command: npm install -g @angular/cli && npm install --save-dev @angular-devkit/build-angular 
       - run:
           name: Frontend build
           command: npm run build:frontend
