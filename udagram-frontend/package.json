@@ -8,9 +8,9 @@
     "start": "ng serve",
     "build": "ng build",
     "build-circleci": "export NODE_OPTIONS=--openssl-legacy-provider; ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
+    "test": "export NODE_OPTIONS=--openssl-legacy-provider; ng test",
+    "lint": "export NODE_OPTIONS=--openssl-legacy-provider; ng lint",
+    "e2e": "export NODE_OPTIONS=--openssl-legacy-provider; ng e2e",
     "deploy": "aws s3 cp --recursive --acl public-read ./www s3://udagram-frontend2022/"
   },
   "private": true,
