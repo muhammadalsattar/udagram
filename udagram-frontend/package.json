@@ -11,7 +11,7 @@
     "test": "export NODE_OPTIONS=--openssl-legacy-provider; ng test",
     "lint": "export NODE_OPTIONS=--openssl-legacy-provider; ng lint",
     "e2e": "export NODE_OPTIONS=--openssl-legacy-provider; ng e2e",
-    "deploy": "aws s3 cp --recursive --acl public-read ./www s3://udagram-frontend2022/"
+    "deploy": "aws configure set region && aws s3 cp --recursive --acl public-read ./www s3://udagram-frontend2022/ --profile default"
   },
   "private": true,
   "dependencies": {
