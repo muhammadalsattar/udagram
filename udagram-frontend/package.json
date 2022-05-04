@@ -6,10 +6,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider; ng build",
+    "build": "ng build",
+    "build-circleci": "export NODE_OPTIONS=--openssl-legacy-provider; ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "aws s3 cp --recursive --acl public-read ./www s3://udagram-frontend2022/"
   },
   "private": true,
   "dependencies": {

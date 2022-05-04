@@ -18,7 +18,7 @@ jobs:
           command: npm run install:api
       - run:
           name: Frontend build
-          command: npm run build:frontend
+          command: npm run build:frontend-circleci
       - run:
           name: API build
           command: npm run build:api
@@ -26,99 +26,8 @@ jobs:
           name: Frontend test
           command: npm run test:frontend
       - run:
-          name: API test
-          command: npm run test:api
-      - run:
           name: Frontend deploy
           command: npm run deploy:frontend
       - run:
           name: API deploy
           command: npm run deploy:api
-
-
-# version: 2.1
-# orbs:
-#   node: circleci/node@4.1.0
-#   aws-cli: circleci/aws-cli@1.3.1
-# jobs:
-#   install:
-#     docker:
-#       - image: "cimg/base:stable"
-#     steps: 
-#       - node/install
-#       - checkout
-#       - run:
-#           name: Frontend install
-#           command: npm run install:frontend
-#       - run:
-#           name: API install
-#           command: npm run install:api
-#   build:
-#     docker:
-#       - image: "cimg/base:stable"
-#     steps:
-#       - node/install
-#       - checkout
-#       - run:
-#           name: Frontend install
-#           command: npm run install:frontend
-#       - run:
-#           name: API install
-#           command: npm run install:api
-#       - run:
-#           name: Frontend build
-#           command: npm run build:frontend
-#       - run:
-#           name: API build
-#           command: npm run build:api
-#   test:
-#     docker:
-#       - image: "cimg/base:stable"
-#     steps:
-#       - node/install
-#       - checkout
-#       - run:
-#           name: Frontend install
-#           command: npm run install:frontend
-#       - run:
-#           name: API install
-#           command: npm run install:api
-#       - run:
-#           name: Frontend test
-#           command: npm run test:frontend
-#       - run:
-#           name: API test
-#           command: npm run test:api
-#   deploy:
-#     docker:
-#       - image: "cimg/base:stable"
-#     steps:
-#       - node/install
-#       - checkout
-#       - aws-cli/install
-#       - run:
-#           name: Frontend install
-#           command: npm run install:frontend
-#       - run:
-#           name: API install
-#           command: npm run install:api
-#       - run:
-#           name: Frontend deploy
-#           command: npm run deploy:frontend
-#       - run:
-#           name: API deploy
-#           command: npm run deploy:api
-# workflows:
-#   version: 2.1
-#   udagram:
-#     jobs:
-#       - install
-#       - build:
-#           requires:
-#             - install
-#       - test:
-#           requires:
-#             - build
-#       - deploy:
-#           requires:
-#            - test

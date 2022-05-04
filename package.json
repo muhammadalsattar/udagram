@@ -1,12 +1,11 @@
-
 {
     "scripts": {
         "install:frontend": "cd udagram-frontend && npm install --include=dev",
         "install:api": "cd udagram-api && npm install --include=dev",
         "build:frontend": "cd udagram-frontend && npm run build",
+        "build:frontend-circleci": "cd udagram-frontend && npm run build-circleci",
         "build:api": "cd udagram-api && npm run build",
         "test:frontend": "cd udagram-frontend && npm run test",
-        "test:api": "cd udagram-api && npm run test",
         "deploy:frontend": "cd udagram-frontend && npm run deploy",
         "deploy:api": "cd udagram-api && npm run deploy"
     },
