@@ -2,7 +2,6 @@ version: 2.1
 orbs:
   node: circleci/node@4.1.0
   aws-cli: circleci/aws-cli@1.3.1
-  python: circleci/python@2.0.3
 jobs:
   build:
     docker:
@@ -19,7 +18,7 @@ jobs:
           name: Install eb-cli with python
           command: |
             sudo apt install python3.8
-            sudo apt install python3-pip
+            sudo apt-get install python3-pip
             pip install awsebcli --upgrade
       - run:
           name: Frontend install
