@@ -40,3 +40,12 @@ jobs:
       - run:
           name: API deploy
           command: npm run deploy:api
+  test:
+    docker:
+      - image: 'cimg/node:13.12-browsers'
+    steps:
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
+    run:
+      name: Frontend test
+      command: npm run test:frontend  
