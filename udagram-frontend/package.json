@@ -8,7 +8,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build-circleci": "export NODE_OPTIONS=--openssl-legacy-provider; ng build",
-    "test": "export NODE_OPTIONS=--openssl-legacy-provider; ng test",
+    "test": "export NODE_OPTIONS=--openssl-legacy-provider; ng test --browsers CircleCI_ChromeHeadless",
     "lint": "export NODE_OPTIONS=--openssl-legacy-provider; ng lint",
     "e2e": "export NODE_OPTIONS=--openssl-legacy-provider; ng e2e",
     "deploy": "aws s3 cp --recursive --acl public-read ./www s3://udagram-frontend2022/ --profile default"
