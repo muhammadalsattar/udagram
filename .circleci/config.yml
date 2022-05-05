@@ -15,9 +15,12 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           aws-region: AWS_REGION
-      - run: 
-          name: Install eb cli
-          command: python ./aws-elastic-beanstalk-cli-setup/scripts/ebcli_installer.py
+      - run:
+          name: Install eb-cli with python
+          command: |
+            sudo apt install python3.8
+            sudo apt install python3-pip
+            pip install awsebcli --upgrade
       - run:
           name: Frontend install
           command: npm run install:frontend
