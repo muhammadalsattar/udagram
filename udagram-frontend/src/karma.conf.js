@@ -25,20 +25,20 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
-    // customLaunchers: {
-    //   CircleCI_ChromeHeadless: {
-    //     base: 'ChromeHeadless',
-    //     flags: [
-    //       '--headless',
-    //       '--disable-gpu',
-    //       '--disable-translate',
-    //       '--disable-extensions',
-    //       '--no-sandbox',
-    //      '--remote-debugging-port=9222',
-    //     ],
-    //   }
-    // },
+    browsers: ['CircleCI_ChromeHeadless'],
+    customLaunchers: {
+      CircleCI_ChromeHeadless: {
+        base: 'ChromeHeadless',
+        flags: [
+          '--headless',
+          '--disable-gpu',
+          '--disable-translate',
+          '--disable-extensions',
+          '--no-sandbox',
+         '--remote-debugging-port=9222',
+        ],
+      }
+    },
     singleRun: false
   });
 };
