@@ -31,9 +31,9 @@ jobs:
       - run:
           name: API build
           command: npm run build:api
-      - run:
-          name: Frontend test
-          command: npm run test:frontend
+      # - run:
+      #     name: Frontend test
+      #     command: npm run test:frontend
       - run:
           name: Frontend deploy
           command: npm run deploy:frontend
