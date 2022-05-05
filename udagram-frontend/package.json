@@ -8,7 +8,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build-circleci": "ng build",
-    "test": "NODE_OPTIONS='--max-old-space-size=8192'; ng test",
+    "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "aws s3 cp --recursive --acl public-read ./www s3://udagram-frontend2022/ --profile default"
