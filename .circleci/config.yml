@@ -46,6 +46,6 @@ jobs:
     steps:
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
-    run:
-      name: Frontend test
-      command: npm run test:frontend  
+      run:
+        name: Frontend test
+        command: npm run test:frontend  
