@@ -17,8 +17,7 @@ jobs:
           aws-region: AWS_REGION
       - run: 
           name: Install eb cli
-          command: |
-            curl -sL https://elasticbeanstalk.s3.amazonaws.com/cli/latest/install-bundle.sh | sh
+          command: python ./aws-elastic-beanstalk-cli-setup/scripts/ebcli_installer.py
       - run:
           name: Frontend install
           command: npm run install:frontend
