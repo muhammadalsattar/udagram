@@ -5,9 +5,10 @@
         "build:frontend": "cd udagram-frontend && npm run build",
         "build:frontend-circleci": "cd udagram-frontend && npm run build-circleci",
         "build:api": "cd udagram-api && npm run build",
-        "test:frontend": "cd udagram-frontend && npm run test && npm run e2e",
+        "test:frontend": "echo \"Error: no test specified\" && exit 1",
+        "test:api": "cd udagram-api && npm run test",
         "deploy:frontend": "cd udagram-frontend && npm run deploy",
-        "deploy:api": "cd udagram-api && npm run deploy"
+        "deploy:api": "cd udagram-api && npm run deploy && npm run set-env"
     },
     "devDependencies": {}
 }

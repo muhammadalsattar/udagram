@@ -6,6 +6,9 @@ orbs:
   browser-tools: circleci/browser-tools@1.3.0
 jobs:
   build:
+    branches:
+      only:
+        - main/master
     docker:
       - image: 'cimg/node:16.15.0-browsers'
     steps: 
@@ -34,6 +37,9 @@ jobs:
       # - run:
       #     name: Frontend test
       #     command: npm run test:frontend
+      - run: 
+          name: API test
+          command: npm run test:api
       - run:
           name: Frontend deploy
           command: npm run deploy:frontend

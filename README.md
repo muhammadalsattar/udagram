@@ -2,6 +2,8 @@
 
 Udagram is a starter project from Udacity. My mission is to deploy the app to AWS and automate the process with CircleCI CI/CD pipeline.
 
+### [Visit application](http://udagram-frontend2022.s3-website-us-east-1.amazonaws.com/home)
+
 ## CI/CD Pipeline
 
 1. Clone this repo locally into the location of your choice.
