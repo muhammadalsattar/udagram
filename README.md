@@ -5,7 +5,7 @@ Udagram is a starter project from Udacity. My mission is to deploy the app to AW
 [(https://circleci.com/gh/muhammadalsattar/udagram.svg?style=svg)](https://app.circleci.com/pipelines/github/muhammadalsattar/udagram)
 
 
-### [Visit application](http://udagram-frontend2022.s3-website-us-east-1.amazonaws.com/home)
+### [Visit application](http://udagram-frontend2022.s3-website-us-east-1.amazonaws.com/)
 
 ## CI/CD Pipeline
 
